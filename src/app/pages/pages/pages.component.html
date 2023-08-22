@@ -1,0 +1,67 @@
+<mat-toolbar class="mat-elevation-z8">
+    <button
+    mat-icon-button
+    (click)="sidenav.toggle()"
+  >
+  
+    <mat-icon *ngIf="!sidenav.opened"> menu </mat-icon>
+    <mat-icon *ngIf="sidenav.opened"> close </mat-icon>
+  </button>
+    Responsive side navigation
+    <span class="toolbar-spacer"></span>
+    <button mat-icon-button >
+        <mat-icon class="control-item">alternate_email</mat-icon>
+    </button>
+    <button mat-icon-button >
+        <mat-icon class="control-item">notifications</mat-icon>
+    </button>
+    <button mat-icon-button [routerLink]="'/login'">
+        <!-- <mat-icon class="user-action" *ngId="!isUserLoggedOn">person_add</mat-icon> -->
+        <mat-icon class="user-action" >person</mat-icon>
+    </button>
+      
+</mat-toolbar>
+<mat-sidenav-container>
+    <mat-sidenav mode="over" class="mat-elevation-z8" #sidenav="matSidenav">
+        <button mat-button class="menu-button" color="primary" [routerLink]="'/search/vpn'">
+            <mat-icon>vpn_lock</mat-icon>
+            <span>VPN</span>
+        </button>
+        <button mat-button class="menu-button" [routerLink]="'/search/firewall'">
+            <mat-icon>fireplace</mat-icon>
+            <span>Firewall</span>
+        </button>
+        <button mat-button class="menu-button" [routerLink]="'/search/iam'">
+            <mat-icon>person</mat-icon>
+            <span>IAM</span>
+        </button> 
+        <button mat-button class="menu-button" [routerLink]="'/search/antivirus'">
+            <mat-icon>security</mat-icon>
+            <span>AntiVirus</span>
+        </button> 
+    </mat-sidenav>
+    
+    <mat-sidenav-content>
+        <div class="content">
+            <router-outlet></router-outlet>
+            <div class="align-right-center" >
+                <button mat-fab color="warn" (click)="sidenavAdmin.toggle()">
+                    <mat-icon>admin_panel_settings</mat-icon>
+                </button>
+            </div>
+        </div>
+        
+    </mat-sidenav-content>
+
+    <mat-sidenav #right position="end" mode="side" class="mat-elevation-z8" #sidenavAdmin="matSidenav"
+    opened="true">
+        <button mat-button class="menu-button" color="primary" [routerLink]="'/user-management'">
+            <mat-icon>manage_accounts</mat-icon>
+            <span>Accounts</span>
+        </button>
+        <button mat-button class="menu-button" color="primary" [routerLink]="'/administration'">
+            <mat-icon>description</mat-icon>
+            <span>Articles</span>
+        </button>
+    </mat-sidenav>
+</mat-sidenav-container>

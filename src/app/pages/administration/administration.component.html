@@ -1,0 +1,36 @@
+<mat-card>
+    <mat-card-content>
+        <mat-accordion>
+            <mat-expansion-panel *ngFor="let item of articles" (collapsedChange)="expandArticle(item)">
+                <mat-expansion-panel-header>
+                    {{item.title}}
+                </mat-expansion-panel-header>
+                <mat-panel-description>
+                    <form [formGroup]="fg" >
+                        
+                        <div class="subtitle">Type</div>
+                        <mat-select formControlName="type" fullWidth="">
+                            <mat-option value="IAM">IAM</mat-option>
+                            <mat-option value="VPN">VPN</mat-option>
+                            <mat-option value="Firewall">Firewall</mat-option>
+                        </mat-select>
+                        
+                        <div class="subtitle">Titre</div>
+                        <input nbInput type="text" fullWidth status="basic" placeholder="Title" formControlName="title" fieldSize="large"/>
+                        <div class="subtitle">Texte</div>
+                        <textarea nbInput fullWidth placeholder="Texte" status="basic" formControlName="text"></textarea>
+                        
+                        <div class="subtitle">Email du contact</div>
+                        <input nbInput type="text" fullWidth status="basic" placeholder="Email" formControlName="email" fieldSize="large" required="" class="email"/>
+                    
+                        <div class="items-rows">
+                            <button type="button" nbButton status="primary" (click)="updateArticle(item)">Update</button>
+                            <button matButton type="button" status="danger" (click)="deleteArticle(item)">Delete</button>
+                            <button matButton type="button" status="success" (click)="validateArticle(item)">Validate</button>
+                        </div>
+                    </form>
+                </mat-panel-description>
+            </mat-expansion-panel>
+        </mat-accordion>
+    </mat-card-content>
+</mat-card>

@@ -19,10 +19,17 @@
     "target": "ES2022",
     "module": "ES2022",
     "useDefineForClassFields": false,
+    "strictPropertyInitialization": false,
     "lib": [
       "ES2022",
       "dom"
-    ]
+    ],
+    "paths": {
+      "@pages/*" : ["src/app/pages/*"],
+      "@model/*" : ["src/app/model/*"],
+      "@service/*" : ["src/app/services/*"],
+      "@pipes/*" : ["src/app/pipes/*"],
+    }
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,

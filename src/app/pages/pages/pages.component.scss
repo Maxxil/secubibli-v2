@@ -1,0 +1,101 @@
+mat-toolbar {
+  background: #6200ee;
+  color: white;
+  max-width: 1920px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+mat-sidenav {
+  // margin: 16px;
+  width: 16rem;
+  border-right: none;
+  background: #ebebeb;
+  color: white;
+  border-radius: 10px;
+  padding-top: 10px;
+  // padding: 16px;
+  text-align: center;
+
+  button {
+    padding : .75rem 1rem;
+    span{
+      font-size: .8125rem;
+    }
+    mat-icon{
+      font-size: 1.25rem;
+    }
+    
+  }
+}
+
+.content {
+  height: calc(100vh - 130px);
+  //border-radius: 10px;
+  margin: 16px;
+  margin-left: 32px;
+
+  padding: 16px;
+
+  overflow: auto;
+}
+
+mat-sidenav-container {
+  height: calc(100vh - 65px);
+}
+
+.menu-button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 1rem;
+
+  mat-icon {
+    margin-right: 8px;
+  }
+}
+
+.avatar {
+  margin-top: 16px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.name {
+  margin-top: 8px;
+  font-weight: normal;
+}
+
+.designation {
+  margin-top: 2px;
+  font-size: 0.7rem;
+  color: lightgrey;
+}
+
+mat-divider {
+  margin-top: 16px;
+  margin-bottom: 16px;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.header-container{
+  text-align: left;
+}
+
+.toolbar-spacer {
+  flex: 1 1 auto;
+}
+
+.align-right-center{
+  position: absolute;
+  top: 50%;
+  right: 10%;
+}
+
+.move-admin-button-sidenavadmin-open{
+  margin-right: 192px;
+}
