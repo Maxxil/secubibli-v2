@@ -8,20 +8,20 @@ import { PagesModule } from '@pages/pages.module';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
-import { MatOptionExtensionDirective } from './directives/mat-option-extension/mat-option-extension.directive';
-import { AppSelectComponent } from './extension/app-select/app-select.component';
-import { AppOptionComponent } from './extension/app-option/app-option.component';
-import { OptionComponent } from './extension/option/option.component';
-import { SelectComponent } from './extension/select/select.component';
+// import { MatOptionExtensionDirective } from './directives/mat-option-extension/mat-option-extension.directive';
+// import { AppSelectComponent } from './extension/app-select/app-select.component';
+// import { AppOptionComponent } from './extension/app-option/app-option.component';
+// import { OptionComponent } from './extension/option/option.component';
+// import { SelectComponent } from './extension/select/select.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MatOptionExtensionDirective,
-    AppSelectComponent,
-    AppOptionComponent,
-    OptionComponent,
-    SelectComponent
+    // MatOptionExtensionDirective,
+    // AppSelectComponent,
+    // AppOptionComponent,
+    // OptionComponent,
+    // SelectComponent
   ],
   imports: [
     BrowserModule,

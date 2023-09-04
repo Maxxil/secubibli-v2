@@ -24,8 +24,8 @@ const routes: Routes = [
         component: UserManagementComponent
       },
       {
-        path: "login",
-        component: AuthenticationComponent
+        path: "profile",
+        loadChildren : () => import("./profile/profile.module").then(x => x.ProfileModule)
       },
       {
         path: "register",

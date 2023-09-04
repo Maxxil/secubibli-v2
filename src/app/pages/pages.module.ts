@@ -30,6 +30,7 @@ import { AuthenticationComponent } from './authentication/authentication.compone
 import { RegistrationComponent } from './registration/registration.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { UserManagementComponent } from './user-management/user-management.component';
+import {MatMenuModule} from '@angular/material/menu';
 
 
 @NgModule({
@@ -66,7 +67,7 @@ import { UserManagementComponent } from './user-management/user-management.compo
     MatTabsModule,
     MatTableModule,
     MatSlideToggleModule,
-    
+    MatMenuModule
   ]
 })
 export class PagesModule { }

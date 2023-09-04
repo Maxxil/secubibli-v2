@@ -15,10 +15,20 @@
     <button mat-icon-button >
         <mat-icon class="control-item">notifications</mat-icon>
     </button>
-    <button mat-icon-button [routerLink]="'/login'">
+    <button mat-icon-button [matMenuTriggerFor]="menuProfile" [routerLink]="'/profile/'">
         <!-- <mat-icon class="user-action" *ngId="!isUserLoggedOn">person_add</mat-icon> -->
         <mat-icon class="user-action" >person</mat-icon>
     </button>
+    <mat-menu #menuProfile="matMenu">
+        <button mat-menu-item [routerLink]="'/profile/login'">
+            <mat-icon>login</mat-icon>
+            <span>Login</span>
+        </button>
+        <button mat-menu-item [routerLink]="'/profile/signin'">
+            <mat-icon>person_add</mat-icon>
+            <span>Signin</span>
+        </button>
+    </mat-menu>
       
 </mat-toolbar>
 <mat-sidenav-container>

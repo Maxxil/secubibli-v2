@@ -2,7 +2,8 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { ArticleModel } from 'src/app/model/article.model';
-import { ARTICLE_URL, CREATE_ARTICLE_URL, UPDATE_ARTICLE_URL } from 'src/app/types/BackendUrl.type';
+import { CREATE_ARTICLE_URL, ARTICLE_URL, UPDATE_ARTICLE_URL } from 'src/app/types/article.type';
+
 
 @Injectable({
   providedIn: 'root'
